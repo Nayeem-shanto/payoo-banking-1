@@ -1,10 +1,43 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Payoo-Banking-1</title>
-</head>
-<body>
-    
-</body>
+    <!-- Css file link -->
+    <link rel="stylesheet" href="styles/style.css" />
+    <!-- tailwind and daisy UI link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Font Awesome Link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="bg-[#F4F5F7] h-[100vh] flex flex-col justify-center items-center">
+    <div class="image-div h-[150px] w-[300px] bg-[url('assets/bg.png')] bg-cover flex justify-center items-center">
+        <img src="./assets/Group.png" alt="">
+    </div>
+    <form class="bg-white rounded-lg w-[350px] p-8">
+      <div class=" font-bold">
+        <label for="Mobile Number">Mobile Number</label>
+        <br>
+        <input id="mobile-number" type="text" placeholder="Mobile-Number" class="input  rounded-xl mt-2" />
+      </div>
+      <div class="font-bold">
+        <label for="4 Digiy Pin">4 Digit Pin</label>
+        <br>
+        <input id="pin-number" type="text" placeholder="4 Digit Pin" class="input rounded-xl mt-2" />
+      </div>
+      <button id="login-btn" class="btn w-full rounded-xl mt-4 bg-[#0874F2] text-white font-bold">LogIn</button>
+    </form>
+    <script src="/js/payoo.js"></script>
+  </body>
 </html>
