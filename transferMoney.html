@@ -1,7 +1,7 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Transfer Money</title>
     <!-- Css file link -->
     <link rel="stylesheet" href="styles/style.css" />
@@ -21,60 +21,109 @@
       referrerpolicy="no-referrer"
     />
     <!-- favicon -->
-     <link rel="shortcut icon" href="./assets/Group.png" type="image/x-icon">
-</head>
-<body class="max-w-lg mx-auto ">
-    <nav class="nav-container flex justify-between items-center p-3 border-b border-gray-300">
-        <div class="nav-left flex items-center">
-            <img src="/assets/Group.png" alt="">
-            <div>
-                <h4 class="font-bold">$<span>54000</span></h4>
-                <p class="font-semibold text-gray-500">Available Balance</p>
-            </div>
+    <link rel="shortcut icon" href="./assets/Group.png" type="image/x-icon" />
+  </head>
+  <body class="max-w-lg mx-auto">
+    <nav
+      class="nav-container flex justify-between items-center p-3 border-b border-gray-300"
+    >
+      <div class="nav-left flex items-center">
+        <img src="/assets/Group.png" alt="" />
+        <div>
+          <h4 class="font-bold">$<span>54000</span></h4>
+          <p class="font-semibold text-gray-500">Available Balance</p>
         </div>
+      </div>
 
-        <div class="nav-right">
-            <button class="btn text-gray-600">Log Out</button>
-        </div>
+      <div class="nav-right">
+        <button class="btn text-gray-600">Log Out</button>
+      </div>
     </nav>
 
     <main class="main-container mt-10">
-        <div>
-            <h1 class="font-bold text-3xl">🔥 Welcome to Payooo!</h1>
-            <p class="text-gray-500 text-lg mt-3">Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
+      <div>
+        <h1 class="font-bold text-3xl">🔥 Welcome to Payooo!</h1>
+        <p class="text-gray-500 text-lg mt-3">
+          Enjoy easy and convenient financial services with us. Cashout charge
+          is low and
+        </p>
+      </div>
+
+      <!-- transaction section -->
+
+      <section
+        class="transaction-section-container w-full grid grid-cols-3 gap-2 bg-white rounded-lg mt-5"
+      >
+        <div class="border-2 border-gray-300 p-5 rounded-lg">
+          <img class="mx-auto" src="./assets/wallet1.png" alt="" />
+          <h6 class="text-center">Add Money</h6>
         </div>
-
-        <!-- transaction section -->
-
-        <section class="transaction-section-container w-full grid grid-cols-3 gap-2 bg-white rounded-lg mt-5">
-            <div class="border-2 border-gray-300 p-5 rounded-lg">
-                <img class="mx-auto" src="./assets/wallet1.png" alt="">
-                <h6 class="text-center">Add Money</h6>
-            </div>
-            <div class="border-2 border-gray-300 p-5 rounded-lg">
-                <img class="mx-auto" src="./assets/purse1.png" alt="">
-                <h6 class="text-center">Cashout</h6>
-            </div>
-            <div class="border-2 border-gray-300 p-5 rounded-lg">
-                <img class="mx-auto" src="./assets/money1.png" alt="">
-                <h6 class="text-center">Transfer Money</h6>
-            </div>
-            <div class="border-2 border-gray-300 p-5 rounded-lg">
-                <img class="mx-auto" src="./assets/bonus1.png" alt="">
-                <h6 class="text-center">Get Bonus</h6>
-            </div>
-            <div class="border-2 border-gray-300 p-5 rounded-lg">
-                <img class="mx-auto" src="./assets/purse1.png" alt="">
-                <h6 class="text-center">Pay Bill</h6>
-            </div>
-            <div class="border-2 border-gray-300 p-5 rounded-lg">
-                <img class="mx-auto" src="./assets/transaction1.png" alt="">
-                <h6 class="text-center">Transactions</h6>
-            </div>
-        </section>
+        <div class="border-2 border-gray-300 p-5 rounded-lg">
+          <img class="mx-auto" src="./assets/purse1.png" alt="" />
+          <h6 class="text-center">Cashout</h6>
+        </div>
+        <div class="border-2 border-gray-300 p-5 rounded-lg">
+          <img class="mx-auto" src="./assets/money1.png" alt="" />
+          <h6 class="text-center">Transfer Money</h6>
+        </div>
+        <div class="border-2 border-gray-300 p-5 rounded-lg">
+          <img class="mx-auto" src="./assets/bonus1.png" alt="" />
+          <h6 class="text-center">Get Bonus</h6>
+        </div>
+        <div class="border-2 border-gray-300 p-5 rounded-lg">
+          <img class="mx-auto" src="./assets/purse1.png" alt="" />
+          <h6 class="text-center">Pay Bill</h6>
+        </div>
+        <div class="border-2 border-gray-300 p-5 rounded-lg">
+          <img class="mx-auto" src="./assets/transaction1.png" alt="" />
+          <h6 class="text-center">Transactions</h6>
+        </div>
+      </section>
+      <!--Transfer money form -->
+      <section class="bg-[#F4F5F7] mt-4">
+        <h3 class="p-4 font-bold">Transfer Money</h3>
+        <form class="p-4">
+          <div>
+            <label class="font-bold" for="User Account Number"
+              >User Account Number</label
+            >
+            <br />
+            <input
+              type="text"
+              placeholder="Enter 11 digit account number"
+              class="input rounded-xl mt-2 w-full"
+            />
+          </div>
+          <div>
+            <label class="font-bold" for="Amount">Amount</label>
+            <br />
+            <input
+              type="text"
+              placeholder="Enter Amount you want to send"
+              class="input rounded-xl mt-2 w-full"
+            />
+          </div>
+          <div>
+            <label class="font-bold" for="Pin Number">Pin Number</label>
+            <br />
+            <input
+              type="text"
+              placeholder="Enter your 4 digit Pin Number"
+              class="input rounded-xl mt-2 w-full"
+            />
+          </div>
+          <div>
+            <button
+              id="login-btn"
+              class="btn w-full rounded-xl mt-4 bg-[#0874F2] text-white font-bold"
+            >
+              Send Money
+            </button>
+          </div>
+        </form>
+      </section>
     </main>
 
-
-    <script src="/js/home.js"></script>
-</body>
+    
+  </body>
 </html>
