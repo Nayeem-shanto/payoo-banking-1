@@ -99,7 +99,7 @@
               >Bank Account Number</label
             >
             <br />
-            <input
+            <input id="bank-account-input"
               type="text"
               placeholder="Enter your 11 digit account number"
               class="input rounded-xl mt-2 w-full"
@@ -108,7 +108,7 @@
           <div>
             <label class="font-bold" for="Amount to Add">Amount to Add</label>
             <br />
-            <input
+            <input id="add-amount"
               type="text"
               placeholder="Enter Amount you want to add"
               class="input rounded-xl mt-2 w-full"
@@ -117,22 +117,21 @@
           <div>
             <label class="font-bold" for="Pin Number">Pin Number</label>
             <br />
-            <input
+            <input id="pin-number"
               type="text"
               placeholder="Enter your 4 digit Pin Number"
               class="input rounded-xl mt-2 w-full"
             />
           </div>
           <div>
-            <button
-              id="login-btn"
-              class="btn w-full rounded-xl mt-4 bg-[#0874F2] text-white font-bold"
-            >
+            <button class="btn w-full rounded-xl mt-4 bg-[#0874F2] text-white font-bold">
               Add Money
             </button>
           </div>
         </form>
       </section>
     </main>
+
+    <script src="js/addmoney.js"></script>
   </body>
 </html>
