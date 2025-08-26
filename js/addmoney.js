@@ -21,3 +21,7 @@ document.getElementById('add-money').addEventListener('click', function(e){
     const newBalance = addAmount+availableBalance;
     document.getElementById('available-balance').innerText=newBalance;
 })
+
+document.getElementById('logout').addEventListener('click',function(){
+    window.location.href='index.html';
+})

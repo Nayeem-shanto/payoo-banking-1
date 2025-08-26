@@ -28,13 +28,13 @@
         <div class="nav-left flex items-center">
             <img src="/assets/Group.png" alt="">
             <div>
-                <h4 class="font-bold">$<span>54000</span></h4>
+                <h4 class="font-bold">$<span id="initial-balance">54000</span></h4>
                 <p class="font-semibold text-gray-500">Available Balance</p>
             </div>
         </div>
 
         <div class="nav-right">
-            <button class="btn text-gray-600">Log Out</button>
+            <button id="logout" class="btn text-gray-600">Log Out</button>
         </div>
     </nav>
 
@@ -82,15 +82,15 @@
               >Enter Bonus Coupon</label
             >
             <br />
-            <input
+            <input id="bonus-amount"
               type="text"
-              placeholder="Enter your Coupon"
+              placeholder="Enter amount you won from coupon"
               class="input rounded-xl mt-2 w-full"
             />
           </div>
           <div>
             <button
-              id="login-btn"
+              id="bonus-btn"
               class="btn w-full rounded-xl mt-4 bg-[#0874F2] text-white font-bold"
             >
               Get Bonus
@@ -100,5 +100,7 @@
       </section>
     </main>
 
+
+    <script src="js/getbonus.js"></script>
 </body>
 </html>
