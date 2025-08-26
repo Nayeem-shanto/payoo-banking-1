@@ -30,7 +30,7 @@
       <div class="nav-left flex items-center">
         <img src="/assets/Group.png" alt="" />
         <div>
-          <h4 class="font-bold">$<span>54000</span></h4>
+          <h4 class="font-bold">$<span id="available-balance">54000</span></h4>
           <p class="font-semibold text-gray-500">Available Balance</p>
         </div>
       </div>
@@ -84,9 +84,9 @@
         <h3 class="p-4 font-bold">Add Money</h3>
         <form class="p-4">
           <div>
-            <label class="font-bold" for="bank">Select Bank</label>
+            <label class="font-bold " for="bank">Select Bank</label>
             <br />
-            <select class="select mt-2 w-full rounded-xl">
+            <select id="select-bank" class="select mt-2 w-full rounded-xl">
               <option disabled selected>Select Bank</option>
               <option>Modhumoti Bank</option>
               <option>IFIC Bank</option>
@@ -99,7 +99,7 @@
               >Bank Account Number</label
             >
             <br />
-            <input id="bank-account-input"
+            <input id="account-number"
               type="text"
               placeholder="Enter your 11 digit account number"
               class="input rounded-xl mt-2 w-full"
@@ -124,7 +124,7 @@
             />
           </div>
           <div>
-            <button class="btn w-full rounded-xl mt-4 bg-[#0874F2] text-white font-bold">
+            <button id="add-money" class="btn w-full rounded-xl mt-4 bg-[#0874F2] text-white font-bold">
               Add Money
             </button>
           </div>
