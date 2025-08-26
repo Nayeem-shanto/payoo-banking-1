@@ -9,3 +9,4 @@ document.getElementById('bonus-btn').addEventListener('click', function(e){
     const newBalance = initialBalance + bonusAmount;
     document.getElementById('initial-balance').innerText = newBalance;
 })
+

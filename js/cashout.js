@@ -23,3 +23,4 @@ document.getElementById('withdraw-btn').addEventListener('click', function(e){
     const newBalance = initialBalance - withdrawAmount;
     document.getElementById('initial-balance').innerText = newBalance;
 })
+

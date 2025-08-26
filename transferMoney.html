@@ -30,7 +30,7 @@
       <div class="nav-left flex items-center">
         <img src="/assets/Group.png" alt="" />
         <div>
-          <h4 class="font-bold">$<span>54000</span></h4>
+          <h4 class="font-bold">$<span id="initial-balance">54000</span></h4>
           <p class="font-semibold text-gray-500">Available Balance</p>
         </div>
       </div>
@@ -51,7 +51,7 @@
 
       <!-- transaction section -->
 
-      <section
+      <section id="transfer-container"
         class="transaction-section-container w-full grid grid-cols-3 gap-2 bg-white rounded-lg mt-5"
       >
         <div class="border-2 border-gray-300 p-5 rounded-lg">
@@ -88,7 +88,7 @@
               >User Account Number</label
             >
             <br />
-            <input
+            <input id="account-number"
               type="text"
               placeholder="Enter 11 digit account number"
               class="input rounded-xl mt-2 w-full"
@@ -97,7 +97,7 @@
           <div>
             <label class="font-bold" for="Amount">Amount</label>
             <br />
-            <input
+            <input id="amount"
               type="text"
               placeholder="Enter Amount you want to send"
               class="input rounded-xl mt-2 w-full"
@@ -106,7 +106,7 @@
           <div>
             <label class="font-bold" for="Pin Number">Pin Number</label>
             <br />
-            <input
+            <input id="pin-number"
               type="text"
               placeholder="Enter your 4 digit Pin Number"
               class="input rounded-xl mt-2 w-full"
@@ -114,16 +114,16 @@
           </div>
           <div>
             <button
-              id="login-btn"
+              id="transfer-btn"
               class="btn w-full rounded-xl mt-4 bg-[#0874F2] text-white font-bold"
             >
-              Send Money
+              Transfer Money
             </button>
           </div>
         </form>
       </section>
     </main>
 
-    
+    <script src="js/transfermoney.js"></script>
   </body>
 </html>
