@@ -20,7 +20,7 @@ function getInputValueConverted(id){
     const inputValueConverted = parseInt(document.getElementById(id).value);
     return inputValueConverted;
 }
-
+const defaultPinNumber = 3842;
 /* Features for add money form */
 document
   .getElementById("add-money-submit-btn")
@@ -44,7 +44,7 @@ document
         return;
     }
 
-    if(pinNumber.length != 4){
+    if(pinNumber !== defaultPinNumber){
         alert("please provide a valid pin number");
         return;
     }
@@ -66,7 +66,7 @@ document
     const withDrawAmount = getInputValueConverted('withdraw-amount');
     console.log(withDrawAmount);
 
-    const pinNumber = getInputValueConverted('cashout-pin-number');
+    const pinNumber = getInputValueConverted('cash-out-pin');
     console.log(pinNumber);
 
     if(agentNumber.length !=11){
@@ -74,7 +74,7 @@ document
         return;
     }
 
-    if(pinNumber.length != 4){
+    if(pinNumber !== defaultPinNumber){
         alert("please provide a valid pin number");
         return;
     }
@@ -103,8 +103,9 @@ document
         return;
     }
 
-    if(pinNumber.length != 4){
+    if(pinNumber !== defaultPinNumber){
         alert("please provide a valid pin number");
+        return;
     }
     const newBalance = initialBalance- transferAmount;
     document.getElementById('initial-balance').innerText= newBalance;
@@ -151,7 +152,7 @@ document
         return;
     }
 
-    if(pinNumber.length != 4){
+    if(pinNumber !== defaultPinNumber){
         alert("please provide a valid pin number");
         return;
     }
@@ -200,10 +201,12 @@ document
   document.getElementById('get-bonus-toggle').addEventListener('click', function(){
     toggleHandler('get-bonus-container')
   })
+
   /* toggle handler for pay bill */
-  document.getElementById('pay-bill-toggle').addEventListener('click', function(){
+   document.getElementById('pay-bill-toggle').addEventListener('click', function(){
     toggleHandler('pay-bill-container')
-  })
+  }) 
+
   /* toggle handler for transaction */
   document.getElementById('transaction-toggle').addEventListener('click', function(){
     toggleHandler('transaction-container')
