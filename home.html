@@ -28,7 +28,7 @@
         <div class="nav-left flex items-center">
             <img src="/assets/Group.png" alt="">
             <div>
-                <h4 class="font-bold">$<span>54000</span></h4>
+                <h4 class="font-bold">$<span id="initial-balance">54000</span></h4>
                 <p class="font-semibold text-gray-500">Available Balance</p>
             </div>
         </div>
@@ -46,7 +46,7 @@
 
         <!-- transaction section -->
 
-        <section id="add-money-container" class="transaction-section-container w-full grid grid-cols-3 gap-2 bg-white rounded-lg mt-5">
+        <section class="transaction-section-container w-full grid grid-cols-3 gap-2 bg-white rounded-lg mt-5">
             <div id="add-money" class="border-2 border-gray-300 p-5 rounded-lg">
                 <img class="mx-auto" src="./assets/wallet1.png" alt="">
                 <h6 class="text-center">Add Money</h6>
@@ -72,6 +72,238 @@
                 <h6 class="text-center">Transactions</h6>
             </div>
         </section>
+
+<!-- Add money form -->
+      <section class="bg-[#F4F5F7] mt-4">
+        <h3 class="p-4 font-bold">Add Money</h3>
+        <form class="p-4">
+          <div>
+            <label class="font-bold " for="bank">Select Bank</label>
+            <br />
+            <select id="select-bank" class="select mt-2 w-full rounded-xl">
+              <option disabled selected>Select Bank</option>
+              <option>Modhumoti Bank</option>
+              <option>IFIC Bank</option>
+              <option>Dhaka Bank</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="font-bold" for="Bank Account Number"
+              >Bank Account Number</label
+            >
+            <br />
+            <input id="bank-account-number"
+              type="text"
+              placeholder="Enter your 11 digit account number"
+              class="input rounded-xl mt-2 w-full"
+            />
+          </div>
+          <div>
+            <label class="font-bold" for="Amount to Add">Amount to Add</label>
+            <br />
+            <input id="add-amount"
+              type="text"
+              placeholder="Enter Amount you want to add"
+              class="input rounded-xl mt-2 w-full"
+            />
+          </div>
+          <div>
+            <label class="font-bold" for="Pin Number">Pin Number</label>
+            <br />
+            <input id="pin-number"
+              type="text"
+              placeholder="Enter your 4 digit Pin Number"
+              class="input rounded-xl mt-2 w-full"
+            />
+          </div>
+          <div>
+            <button id="add-money-submit-btn" class="btn w-full rounded-xl mt-4 bg-[#0874F2] text-white font-bold">
+              Add Money
+            </button>
+          </div>
+        </form>
+      </section>
+
+ <!-- Cash out form -->
+      <section class="bg-[#F4F5F7] mt-4 hidden">
+        <h3 class="p-4 font-bold">Cash Out</h3>
+        <form class="p-4">       
+          <div>
+            <label class="font-bold" for="Agent Number"
+              >Agent Number</label
+            >
+            <br />
+            <input id="agent-number"
+              type="text"
+              placeholder="Enter 11 digit agent number"
+              class="input rounded-xl mt-2 w-full"
+            />
+          </div>
+          <div>
+            <label class="font-bold" for="Amount">Amount</label>
+            <br />
+            <input id="withdraw-amount"
+              type="text"
+              placeholder="Enter Amount you want to withdraw"
+              class="input rounded-xl mt-2 w-full"
+            />
+          </div>
+          <div>
+            <label class="font-bold" for="Pin Number">Pin Number</label>
+            <br />
+            <input id="pin-number"
+              type="text"
+              placeholder="Enter your 4 digit Pin Number"
+              class="input rounded-xl mt-2 w-full"
+            />
+          </div>
+          <div>
+            <button
+              id="withdraw-btn"
+              class="btn w-full rounded-xl mt-4 bg-[#0874F2] text-white font-bold"
+            >
+              Withdraw Money
+            </button>
+          </div>
+        </form>
+      </section>
+
+ <!--Transfer money form -->
+      <section class="bg-[#F4F5F7] mt-4" hidden>
+        <h3 class="p-4 font-bold">Transfer Money</h3>
+        <form class="p-4">
+          <div>
+            <label class="font-bold" for="User Account Number"
+              >User Account Number</label
+            >
+            <br />
+            <input id="account-number"
+              type="text"
+              placeholder="Enter 11 digit account number"
+              class="input rounded-xl mt-2 w-full"
+            />
+          </div>
+          <div>
+            <label class="font-bold" for="Amount">Amount</label>
+            <br />
+            <input id="amount"
+              type="text"
+              placeholder="Enter Amount you want to send"
+              class="input rounded-xl mt-2 w-full"
+            />
+          </div>
+          <div>
+            <label class="font-bold" for="Pin Number">Pin Number</label>
+            <br />
+            <input id="pin-number"
+              type="text"
+              placeholder="Enter your 4 digit Pin Number"
+              class="input rounded-xl mt-2 w-full"
+            />
+          </div>
+          <div>
+            <button
+              id="transfer-btn"
+              class="btn w-full rounded-xl mt-4 bg-[#0874F2] text-white font-bold"
+            >
+              Transfer Money
+            </button>
+          </div>
+        </form>
+      </section>
+
+<!-- Get Bonus form -->
+      <section class="bg-[#F4F5F7] mt-4" hidden>
+        <h3 class="p-4 font-bold">Get Bonus</h3>
+        <form class="p-4">
+          
+          <div>
+            <label class="font-bold" for="Bonus Coupuon"
+              >Enter Bonus Coupon</label
+            >
+            <br />
+            <input id="bonus-amount"
+              type="text"
+              placeholder="Enter amount you won from coupon"
+              class="input rounded-xl mt-2 w-full"
+            />
+          </div>
+          <div>
+            <button
+              id="bonus-btn"
+              class="btn w-full rounded-xl mt-4 bg-[#0874F2] text-white font-bold"
+            >
+              Get Bonus
+            </button>
+          </div>
+        </form>
+      </section>
+
+<!-- Pay Bill form -->
+      <section id="pay-bill-form-container" class="bg-[#F4F5F7] mt-4" hidden>
+        <h3 class="p-4 font-bold">Pay Bill</h3>
+        <form class="p-4">
+          <div>
+            <label class="font-bold" for="bank">Select to Pay</label>
+            <br />
+            <select class="select mt-2 w-full rounded-xl">
+              <option disabled selected>Select Bill</option>
+              <option>Electricity Bill</option>
+              <option>Gas Bill</option>
+              <option>Water Bill</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="font-bold" for="Biller Account Number"
+              >Biller Account Number</label
+            >
+            <br />
+            <input
+              type="text"
+              placeholder="Enter biller account number"
+              class="input rounded-xl mt-2 w-full"
+            />
+          </div>
+          <div>
+            <label class="font-bold" for="Amount to Pay">Amount to Pay</label>
+            <br />
+            <input
+              type="text"
+              placeholder="Enter Amount you want to pay"
+              class="input rounded-xl mt-2 w-full"
+            />
+          </div>
+          <div>
+            <label class="font-bold" for="Pin Number">Pin Number</label>
+            <br />
+            <input
+              type="text"
+              placeholder="Enter your 4 digit Pin Number"
+              class="input rounded-xl mt-2 w-full"
+            />
+          </div>
+          <div>
+            <button
+              id="login-btn"
+              class="btn w-full rounded-xl mt-4 bg-[#0874F2] text-white font-bold"
+            >
+             Pay Now
+            </button>
+          </div>
+        </form>
+      </section>
+
+<!-- Transaction form -->
+      <section id="transaction-form-container" class="hidden">
+        <div>
+            <h1>Transaction History</h1>
+        </div>
+      </section>
+
+
+
     </main>
 
 
