@@ -55,5 +55,28 @@ document
 
 
   /* toggling features */
-
+/* toggle handler for add money */
+  /* document.getElementById('add-money-toggle').addEventListener('click', function(e){
+    e.preventDefault();
+    const allToggleClass = document.getElementsByClassName('toggle-handler');
+  console.log(allToggleClass);
+  for(const singleToggleClass of allToggleClass){
+    console.log(singleToggleClass);
+    singleToggleClass.style.display= "none";
+  }
+  document.getElementById('add-money-container').style.display="block";
+  }) */
   
+  function toggleHandler(id){
+    const allToggleClass = document.getElementsByClassName('toggle-handler');
+  console.log(allToggleClass);
+  for(const singleToggleClass of allToggleClass){
+    console.log(singleToggleClass);
+    singleToggleClass.style.display= "none";
+  }
+  document.getElementById(id).style.display="block";
+  }
+
+  document.getElementById('add-money-toggle').addEventListener('click', function(){
+    toggleHandler('add-money-container')
+  })

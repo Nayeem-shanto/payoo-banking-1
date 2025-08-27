@@ -47,7 +47,7 @@
         <!-- transaction section -->
 
         <section class="transaction-section-container w-full grid grid-cols-3 gap-2 bg-white rounded-lg mt-5">
-            <div id="add-money" class="border-2 border-gray-300 p-5 rounded-lg">
+            <div id="add-money-toggle" class="border-2 border-gray-300 p-5 rounded-lg">
                 <img class="mx-auto" src="./assets/wallet1.png" alt="">
                 <h6 class="text-center">Add Money</h6>
             </div>
@@ -74,7 +74,7 @@
         </section>
 
 <!-- Add money form -->
-      <section class="bg-[#F4F5F7] mt-4">
+      <section id="add-money-container" class="bg-[#F4F5F7] mt-4 toggle-handler hidden">
         <h3 class="p-4 font-bold">Add Money</h3>
         <form class="p-4">
           <div>
@@ -126,7 +126,7 @@
       </section>
 
  <!-- Cash out form -->
-      <section class="bg-[#F4F5F7] mt-4 hidden">
+      <section class="toggle-handler bg-[#F4F5F7] mt-4 hidden">
         <h3 class="p-4 font-bold">Cash Out</h3>
         <form class="p-4">       
           <div>
@@ -170,7 +170,7 @@
       </section>
 
  <!--Transfer money form -->
-      <section class="bg-[#F4F5F7] mt-4" hidden>
+      <section class="toggle-handler bg-[#F4F5F7] mt-4" hidden>
         <h3 class="p-4 font-bold">Transfer Money</h3>
         <form class="p-4">
           <div>
@@ -214,7 +214,7 @@
       </section>
 
 <!-- Get Bonus form -->
-      <section class="bg-[#F4F5F7] mt-4" hidden>
+      <section class="toggle-handler bg-[#F4F5F7] mt-4" hidden>
         <h3 class="p-4 font-bold">Get Bonus</h3>
         <form class="p-4">
           
@@ -241,7 +241,7 @@
       </section>
 
 <!-- Pay Bill form -->
-      <section id="pay-bill-form-container" class="bg-[#F4F5F7] mt-4" hidden>
+      <section id="pay-bill-form-container" class="toggle-handler bg-[#F4F5F7] mt-4" hidden>
         <h3 class="p-4 font-bold">Pay Bill</h3>
         <form class="p-4">
           <div>
@@ -296,7 +296,7 @@
       </section>
 
 <!-- Transaction form -->
-      <section id="transaction-form-container" class="hidden">
+      <section id="transaction-form-container" class="toggle-handler hidden">
         <div>
             <h1>Transaction History</h1>
         </div>
