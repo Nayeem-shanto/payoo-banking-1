@@ -2,7 +2,7 @@ document.getElementById("logout").addEventListener("click", function () {
   window.location.href = "index.html";
 });
 
-/* Features for add money form */
+
 
 /* function for all inner text */
 function getInnerText(id){
@@ -21,7 +21,7 @@ function getInputValueConverted(id){
     return inputValueConverted;
 }
 
-
+/* Features for add money form */
 document
   .getElementById("add-money-submit-btn")
   .addEventListener("click", function (e) {
@@ -51,6 +51,9 @@ document
     const newBalance = addAmount + initialBalance;
     document.getElementById('initial-balance').innerText= newBalance;
 
-
-
   });
+
+
+  /* toggling features */
+
+  
